@@ -1,5 +1,12 @@
 // script.js
 
+// Initialize EmailJS
+(function(){
+    emailjs.init({
+      publicKey: "yr7wJ6hm-JtFhDcO_",
+    });
+ })();
+
 // Smooth scrolling for anchor links
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -48,9 +55,21 @@ next.addEventListener('click', () => {
     showSlide(currentSlide);
 });
 
-// Contact form submission (placeholder functionality)
+// Contact form submission using EmailJS
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
-    alert('Thank you for your message!');
+
+    // Generate a five-digit number for the contact_number variable
+    this.contact_number.value = Math.random() * 100000 | 0;
+
+    // Send the form data using EmailJS
+    emailjs.sendForm('service_5mmr1dh', 'template_2f5k0hh', this)
+        .then(function() {
+            alert('Thank you for your message!');
+        }, function(error) {
+            alert('Oops! Something went wrong. Please try again.');
+            console.log('FAILED...', error);
+        });
+
     this.reset();
 });
