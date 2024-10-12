@@ -84,7 +84,7 @@
                 <div class="about-text">
                     <h2>About Me</h2>
                     <h1>Hey! I am Matt, founder & principal consultant!</h1>
-                    <p>With over a decade working at the intersection of business and technology. I am focused on bringing a product mindset to how businesses craft their propositions, form their strategy and problem-solving on a daily basis. Working with a range of organisations from start-ups to FTSE100 I have crafted an adaptable approach to delivering business outcomes at speed.</p>
+                    <p>With over a decade working at the intersection of business and technology. I am focused on bringing a product mindset to how businesses craft their propositions, form their strategy and carry out problem-solving on a daily basis.<br><br>Working with a range of organisations from start-ups to FTSE100 I have crafted an adaptable approach to delivering business outcomes at speed.</p>
                 </div>
             </div>
         </section>
@@ -92,6 +92,10 @@
         <!-- Recommendations Section -->
         <section id="recommendations" class="recommendations-section">
             <h2>Recommendations</h2>
+            <div class="carousel-controls">
+                <span class="prev">&#10094;</span>
+                <span class="next">&#10095;</span>
+            </div>
             <div class="carousel">
                 <div class="carousel-item">
                     <p class="quote">"As Head of Commercial, I collaborated closely with Matt, who led the Product team during some of the most transformative years in the company's history. His leadership was instrumental in shaping the product strategy and overseeing the development of Hyble’s new platform, which was rebuilt from the ground up."</p>
@@ -106,28 +110,25 @@
                     <p class="name">Benjamin Walker <a href="https://www.linkedin.com/in/benjamin-walker-82b1bb12"><img src="Static/LI.png" alt="LinkedIn"></a></p>
                 </div>
             </div>
-            <div class="carousel-controls">
-                <span class="prev">&#10094;</span>
-                <span class="next">&#10095;</span>
-            </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
             <h2>Contact</h2>
             <form id="contact-form">
-                <!-- Add this hidden input -->
+                <!-- Hidden input for EmailJS -->
                 <input type="hidden" name="contact_number">
+                
                 <div class="form-group">
-                    <input type="text" id="name" name="user_name" required>
+                    <input type="text" id="name" name="user_name" required placeholder=" ">
                     <label for="name">Name</label>
                 </div>
                 <div class="form-group">
-                    <input type="email" id="email" name="user_email" required>
+                    <input type="email" id="email" name="user_email" required placeholder=" ">
                     <label for="email">Email</label>
                 </div>
                 <div class="form-group">
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
                     <label for="message">Message</label>
                 </div>
                 <button type="submit">Send</button>
@@ -140,7 +141,7 @@
             <p>At Firefly Labs, continual learning and experimentation are in our DNA. Our internal projects allow us to experiment with the latest tools and techniques while pursuing the creation of tech experiences that spark joy.</p>
             <div class="product-tiles">
                 <div class="product-tile">
-                    <p>Project Launch Coming Soon</p>
+                    <p>Project Launch<br>Coming Soon</p>
                 </div>
                 <!-- Add more product tiles as needed -->
             </div>
@@ -148,10 +149,10 @@
     </main>
 
     <footer>
-        <p>&copy; 2023 Firefly Labs Development Ltd</p>
+        <p>&copy; 2024 Firefly Labs Development Ltd</p>
     </footer>
 
-    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/latest/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
