@@ -1,97 +1,445 @@
 /* style.css */
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #333;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 header {
-    background-color: #222;
-    color: #fff;
-    padding: 20px;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
     z-index: 1000;
 }
 
-header h1 {
-    margin: 0;
-}
-
 nav {
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
 }
 
-nav a {
-    color: #fff;
-    margin-right: 15px;
-    text-decoration: none;
+.logo a {
+    font-size: 1.5em;
     font-weight: bold;
+    color: #333;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    margin-left: 20px;
+    color: #333;
+    font-size: 1em;
     transition: color 0.3s;
 }
 
-nav a:hover {
-    color: #ff9800;
-    text-decoration: underline;
+.menu a:hover {
+    color: #007BFF;
 }
 
-section {
+.menu-icon {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* Intro Section */
+.intro-section {
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.intro-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro-text {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.intro-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.tenets {
+    margin-top: 20px;
+}
+
+.tenet {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.tenet .icon {
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+.intro-image {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.intro-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Our Services Section */
+.services-section {
+    padding: 80px 20px;
+    background-color: #fff;
+}
+
+.services-section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.services-section p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 1.2em;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-box {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.service-box h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.service-box p {
+    font-size: 1em;
+}
+
+/* About Me Section */
+.about-section {
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    padding: 20px;
+}
+
+.about-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.about-text {
+    flex: 2;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 40px 20px;
+    margin-left: -100px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 1;
+}
+
+.about-text h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.2em;
+}
+
+/* Recommendations Section */
+.recommendations-section {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.recommendations-section h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    padding: 20px;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.quote {
+    font-size: 1.5em;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.name {
+    font-size: 1.2em;
+}
+
+.name img {
+    width: 20px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.carousel-controls {
+    margin-top: 20px;
+}
+
+.carousel-controls .prev,
+.carousel-controls .next {
+    cursor: pointer;
+    font-size: 2em;
+    margin: 0 15px;
+    color: #007BFF;
+}
+
+.carousel-controls .prev:hover,
+.carousel-controls .next:hover {
+    color: #0056b3;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background: none;
+}
+
+.form-group label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #aaa;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.8em;
+    color: #007BFF;
+    background-color: #f8f9fa;
+    padding: 0 5px;
+}
+
+#contact-form button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* In-House Products Section */
+.products-section {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.products-section h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.product-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-tile {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    margin: 10px;
     padding: 60px 20px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
-}
-
-section.in-view {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-section h2 {
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
-}
-
-section h3 {
+    background-color: #f8f9fa;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    font-size: 1.5em;
     color: #555;
 }
 
-.aside {
-    background-color: #f9f9f9;
-    border-left: 5px solid #ddd;
-    padding: 15px 20px;
-    margin: 20px 0;
-    position: relative;
-}
-
-blockquote {
-    font-style: italic;
-    color: #666;
-    border-left: 5px solid #ccc;
-    margin: 30px 0;
-    padding-left: 20px;
-}
-
+/* Footer */
 footer {
     background-color: #222;
     color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 15px;
 }
 
-ul {
-    list-style-type: disc;
-    margin-left: 40px;
-}
-
-@media screen and (min-width: 600px) {
-    body {
-        margin: 0 auto;
-        max-width: 800px;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
+
+    #menu-toggle:checked + .menu-icon + .menu {
+        display: flex;
+    }
+
+    .menu a {
+        margin: 15px;
+    }
+
+    .menu-icon {
+        display: block;
+        color: #333;
+    }
+
+    nav {
+        padding: 10px 20px;
+    }
+
+    .intro-content {
+        flex-direction: column;
+    }
+
+    .intro-image {
+        order: -1;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        margin-left: 0;
+        margin-top: -50px;
+        text-align: center;
+    }
+
+    .carousel-item {
+        padding: 10px;
+    }
+}
+
+/* Add this to style.css */
+header.header-scrolled {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }

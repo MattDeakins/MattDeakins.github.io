@@ -4,102 +4,139 @@
     <meta charset="UTF-8">
     <title>Firefly Labs Development Ltd</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico"> <!-- Optional favicon -->
+    <link rel="icon" href="favicon.ico"> <!-- Replace with your favicon -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <header>
         <nav>
-            <a href="#who-we-are">Who We Are</a>
-            <a href="#what-we-offer">What We Offer</a>
-            <a href="#why-consulting">Why Consulting Services</a>
-            <a href="#why-in-house">Why In-House Products</a>
+            <div class="logo">
+                <a href="#intro">Firefly Labs</a>
+            </div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <div class="menu">
+                <a href="#services">Our Services</a>
+                <a href="#about">About Me</a>
+                <a href="#recommendations">Recommendations</a>
+                <a href="#contact">Contact</a>
+            </div>
         </nav>
-        <h1>Firefly Labs Development Ltd</h1>
     </header>
 
-    <section id="who-we-are">
-        <h2>Who Are We?</h2>
-        <p><strong>Firefly Labs Development Ltd</strong> is a product studio and consulting business, founded to create technology experiences that bring joy to people. At Firefly Labs, we believe that with the right approach, any technology experience can be crafted in a way that delivers a superior user experience while driving tangible business value.</p>
+    <main>
+        <!-- Firefly Labs Intro Section -->
+        <section id="intro" class="intro-section">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h1>Welcome to Firefly Labs Development Ltd</h1>
+                    <p>Firefly Labs Development Ltd is a product studio and consulting business, founded to create technology experiences that bring joy to people. At Firefly Labs, we believe that with the right approach, any technology experience can be crafted in a way that delivers a superior user experience while driving tangible business value.</p>
+                    <div class="tenets">
+                        <div class="tenet">
+                            <div class="icon">✨</div>
+                            <p>We believe that technology should be used to create moments of magic—whether that is enjoyment, the unexpected, or just exceptional ease of use!</p>
+                        </div>
+                        <div class="tenet">
+                            <div class="icon">🧪</div>
+                            <p>Continual learning and experimentation not only foster understanding and better outcomes but also spark curiosity, fun, and enjoyment in the process.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-image">
+                    <!-- Placeholder for big image/animation -->
+                    <img src="/static/Firefly.png" alt="Firefly Labs Intro Image">
+                </div>
+            </div>
+        </section>
 
-        <p>In-house, we focus on small, niche products that aim to bring moments of joy and magic to people’s everyday lives. Our consulting services apply the same principles, helping companies harness product thinking and user experience design to meet their business goals and drive successful outcomes.</p>
+        <!-- Our Services Section -->
+        <section id="services" class="services-section">
+            <h2>Our Services</h2>
+            <p>Whether companies need ongoing support, ad hoc expertise, or fixed-term projects, Firefly Labs works closely with each client to craft bespoke solutions that fit their exact needs.</p>
+            <div class="services-container">
+                <div class="service-box">
+                    <h3>Product Leadership &amp; Operations</h3>
+                    <p>We offer fractional product leadership that integrates with your executive team to embed product thinking across your organisation. Whether you’re looking to establish or refine operational structures, we help your team evolve and deliver additional value utilising product principles.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Product Strategy, Discovery &amp; Design</h3>
+                    <p>If your current product isn’t delivering the results you expect, or if you need to realign your product with an evolving market, we can help you redefine your strategy, strengthen your product proposition, and improve user experience.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Product Delivery</h3>
+                    <p>When time or resources are tight, we can bridge the gap with experienced product expertise for hands-on support. We seamlessly integrate into your workflow and drive results. Our delivery support provides a flexible contract resource to fill the need for a Product Manager for a period of time or contract.</p>
+                </div>
+            </div>
+        </section>
 
-        <p>Here at Firefly Labs we have two tenets:</p>
+        <!-- About Me Section -->
+        <section id="about" class="about-section">
+            <div class="about-content">
+                <div class="about-image">
+                    <!-- Placeholder for your image -->
+                    <img src="/static/Matt.jpg" alt="Matt Deakins">
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I am Matt. I have worked at the intersection of business and technology for my entire career. I am focused on problem-solving for businesses and crafting product experiences that delight users and deliver on business outcomes.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="aside">
-            <p>✨ We believe that technology should be used to create moments of magic whether that is enjoyment, the unexpected, or just exceptional ease of use!</p>
-        </div>
+        <!-- Recommendations Section -->
+        <section id="recommendations" class="recommendations-section">
+            <h2>Recommendations</h2>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <p class="quote">"Matt is an exceptional product leader who brings clarity and focus to complex projects."</p>
+                    <p class="name">John Doe <a href="#"><img src="static/LI.png" alt="LinkedIn"></a></p>
+                </div>
+                <div class="carousel-item">
+                    <p class="quote">"Working with Matt has been a game-changer for our business strategy."</p>
+                    <p class="name">Jane Smith <a href="#"><img src="static/LI.png" alt="LinkedIn"></a></p>
+                </div>
+                <div class="carousel-item">
+                    <p class="quote">"His insights into product development are invaluable."</p>
+                    <p class="name">Alex Johnson <a href="#"><img src="static/LI.png" alt="LinkedIn"></a></p>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <span class="prev">&#10094;</span>
+                <span class="next">&#10095;</span>
+            </div>
+        </section>
 
-        <div class="aside">
-            <p>🧪 Continual learning and experimentation not only foster understanding and better outcomes but also spark curiosity, fun, and enjoyment in the process.</p>
-        </div>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </section>
 
-        <p><strong>Our name combines these two aspects:</strong></p>
-        <ul>
-            <li><strong>Firefly</strong> - representing little moments of magic when found in the wild</li>
-            <li><strong>Labs</strong> - representing a place of continual learning, discovery, and innovation</li>
-        </ul>
-    </section>
-
-    <section id="what-we-offer">
-        <h2>What Do We Offer?</h2>
-        <p>Our consulting services are divided into three broad categories, each designed to address different stages and needs in product development:</p>
-        <ul>
-            <li>Product Leadership & Operations</li>
-            <li>Product Strategy, Discovery & Design</li>
-            <li>Product Delivery</li>
-        </ul>
-        <p>Whether companies need ongoing support, ad hoc expertise, or fixed-term projects, Firefly Labs works closely with each client to craft bespoke solutions that fit their exact needs.</p>
-
-        <h3>Product Leadership & Operations</h3>
-        <p>We offer fractional product leadership that integrates with your executive team to embed product thinking across your organisation. Whether you’re looking to establish or refine operational structures, we help your team evolve and deliver additional value utilising product principles.</p>
-        <p>Our services in this area include:</p>
-        <ul>
-            <li>Organisational & Operational design</li>
-            <li>Relationship management with enterprise customers</li>
-            <li>RFP/Contract negotiations or preparation</li>
-            <li>Pitch deck development</li>
-        </ul>
-
-        <h3>Product Strategy, Discovery & Design</h3>
-        <p>If your current product isn’t delivering the results you expect, or if you need to realign your product with an evolving market, we can help you redefine your strategy, strengthen your product proposition, and improve user experience.</p>
-        <p>Our expertise includes:</p>
-        <ul>
-            <li>Facilitating product discovery workshops</li>
-            <li>Developing and documenting comprehensive product strategies</li>
-            <li>Designing and prototyping intuitive product flows and user experiences</li>
-            <li>Conducting user research and market analysis</li>
-            <li>Crafting product roadmaps and prioritising features for intended outcomes</li>
-            <li>Understanding target markets with user personas and customer journey mapping</li>
-        </ul>
-
-        <h3>Product Delivery</h3>
-        <p>When time or resources are tight, we can bridge the gap with experienced product expertise for hands-on support. We seamlessly integrate into your workflow and drive results.</p>
-        <p>Our delivery support provides a flexible contract resource to fill the need for a Product Manager for a period of time or contract.</p>
-    </section>
-
-    <section id="why-consulting">
-        <h2>Why Do We Offer Consulting Services?</h2>
-        <p>The venture capital market experienced a significant contraction beginning in late 2022, which continued throughout 2023. This was due to rising interest rates, economic uncertainty, and a correction from the funding exuberance of the 2020-2021 period.</p>
-
-        <p>As a result, startups have found themselves in a more challenging environment for raising capital. Investors are now more selective, prioritising sustainable business models with clear paths to profitability. Startups and businesses must refocus on strengthening product propositions and delivering innovations while managing reduced funding resources.</p>
-
-        <p>Firefly Labs’ consulting services provide businesses with <strong>flexible, on-demand product expertise</strong>. Instead of hiring full-time product managers, we offer fractional services that allow companies to scale expertise up or down based on their needs to help them achieve profitability or other business outcomes. This helps businesses remain nimble and competitive, even in tough market conditions.</p>
-    </section>
-
-    <section id="why-in-house">
-        <h2>Why Do We Create Our Own Products In-House?</h2>
-        <p>At Firefly Labs, continual learning and experimentation are in our DNA. Our internal projects allow us to work with the latest tools and techniques, ensuring that we stay at the forefront of innovation.</p>
-
-        <p>This aligns with our overarching philosophy - <em>delivering moments of joy and magic, powered by technology</em>.</p>
-
-        <blockquote>
-            <p><strong>Joy</strong> can manifest in subtle ways: a sigh of relief after completing a task effortlessly, or the satisfaction of connecting with loved ones despite physical distance.</p>
-            <p><strong>Magic</strong> doesn’t need to be flashy or complex. Sometimes, it’s simply making a tedious task effortless or providing an unexpected solution to a common problem.</p>
-        </blockquote>
-
-        <p>Our goal is to create products that feel intuitive and seamless, leaving users wondering how they ever managed without them. Each of our in-house products is an experiment aimed at transforming everyday interactions into moments of joy and magic.</p>
-    </section>
+        <!-- In-House Products Section -->
+        <section id="products" class="products-section">
+            <h2>In-House Products</h2>
+            <div class="product-tiles">
+                <div class="product-tile">
+                    <p>Coming Soon</p>
+                </div>
+                <!-- Add more product tiles as needed -->
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2023 Firefly Labs Development Ltd</p>
