@@ -95,18 +95,26 @@ nav {
 }
 
 .tenets {
+    display: flex;
+    flex-direction: column;
     margin-top: 20px;
 }
 
 .tenet {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 15px;
 }
 
 .tenet .icon {
     font-size: 2em;
-    margin-right: 10px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.tenet p {
+    margin: 0;
+    font-size: 1em;
 }
 
 .intro-image {
@@ -398,6 +406,10 @@ footer {
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
+    .tenets {
+        flex-direction: column;
+    }
+
     #menu-toggle:checked + .menu-icon + .menu {
         display: flex;
     }
@@ -439,7 +451,6 @@ footer {
     }
 }
 
-/* Add this to style.css */
 header.header-scrolled {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
