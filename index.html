@@ -33,10 +33,13 @@
                 <strong>Firefly Labs Development Ltd is a product studio and consulting business,</strong> founded to create superiod technology experiences. At Firefly Labs, we believe that with the right approach, any product can be crafted in a way that delivers an exceptional user experience while driving tangible business value.
             </p>
             <div class="tenets">
+                <br>
                 <div class="tenet">
                     <div class="icon">✨</div>
                     <p>We believe that technology should be used to create moments of magic — whether that is enjoyment, the unexpected, or just amazing ease of use!</p>
                 </div>
+                <br>
+                <br>
                 <div class="tenet">
                     <div class="icon">🧪</div>
                     <p>Continual learning and experimentation not only fosters understanding, facilitates planning and delivers better outcomes - it also sparks curiosity and fun in the process.</p>
@@ -45,7 +48,7 @@
         </div>
         <div class="intro-image">
             <!-- Placeholder for big image/animation -->
-            <img src="/Static/Firefly.png" alt="Firefly Labs Intro Image">
+            <img src="/Static/Firefly.jpg" alt="Firefly Labs Intro Image">
         </div>
     </div>
 </section>
@@ -58,15 +61,15 @@
             <div class="services-container">
                 <div class="service-box">
                     <h3>Leadership &amp; Operations</h3>
-                    <p>We offer fractional product leadership that integrates with your executive team to embed product thinking across your organisation. Whether you’re looking to establish or refine operational structures, we help your team evolve and deliver additional value utilising product principles.</p>
+                    <p>We offer fractional product leadership that integrates with your executive team to embed product thinking across your organisation.<br><br>Whether you’re looking to establish or refine operational structures, we help your team evolve and deliver additional value utilising product principles.</p>
                 </div>
                 <div class="service-box">
                     <h3>Strategy, Discovery &amp; Design</h3>
-                    <p>If your current product isn’t delivering the results you expect, or if you need to realign your product with an evolving market, we can help you redefine your strategy, strengthen your product proposition, and improve user experience.</p>
+                    <p>If your current product isn’t delivering the results you expect, or if you need to realign your product with an evolving market?<br><br>We can help you redefine your strategy, strengthen your product proposition, and improve user experience.</p>
                 </div>
                 <div class="service-box">
                     <h3>Product Delivery</h3>
-                    <p>When time or resources are tight, we can bridge the gap with experienced product expertise for hands-on support. We seamlessly integrate into your workflow and drive results. Our delivery support provides a flexible contract resource to fill the need for a Product Manager for a period of time or contract.</p>
+                    <p>When time or resources are tight, we can bridge the gap with experienced product expertise for hands-on support. We seamlessly integrate into your workflow and drive results.<br><br>Our delivery support provides a flexible contract resource to fill the need for a Product Manager for a period of time or contract.</p>
                 </div>
             </div>
         </section>
@@ -80,7 +83,7 @@
                 </div>
                 <div class="about-text">
                     <h2>About Me</h2>
-                    <h1>Hey! I am Matt, founder & consultant!</h1>
+                    <h1>Hey! I am Matt, founder & principal consultant!</h1>
                     <p>With over a decade working at the intersection of business and technology. I am focused on bringing a product mindset to how businesses craft their propositions, form their strategy and problem-solving on a daily basis. Working with a range of organisations from start-ups to FTSE100 I have crafted an adaptable approach to delivering business outcomes at speed.</p>
                 </div>
             </div>
@@ -113,12 +116,14 @@
         <section id="contact" class="contact-section">
             <h2>Contact</h2>
             <form id="contact-form">
+                <!-- Add this hidden input -->
+                <input type="hidden" name="contact_number">
                 <div class="form-group">
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="user_name" required>
                     <label for="name">Name</label>
                 </div>
                 <div class="form-group">
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="user_email" required>
                     <label for="email">Email</label>
                 </div>
                 <div class="form-group">
@@ -132,7 +137,7 @@
         <!-- In-House Products Section -->
         <section id="products" class="products-section">
             <h2>In-House Products</h2>
-            <p></p>
+            <p>At Firefly Labs, continual learning and experimentation are in our DNA. Our internal projects allow us to experiment with the latest tools and techniques:</p>
             <div class="product-tiles">
                 <div class="product-tile">
                     <p>Coming Soon</p>
@@ -146,6 +151,7 @@
         <p>&copy; 2023 Firefly Labs Development Ltd</p>
     </footer>
 
+    <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
