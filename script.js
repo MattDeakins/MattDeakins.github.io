@@ -1,12 +1,5 @@
 // script.js
 
-// Initialize EmailJS
-(function(){
-    emailjs.init({
-      publicKey: "yr7wJ6hm-JtFhDcO_",
-    });
- })();
-
 // Smooth scrolling for anchor links
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -54,6 +47,8 @@ next.addEventListener('click', () => {
     currentSlide = (currentSlide === totalSlides - 1) ? 0 : currentSlide + 1;
     showSlide(currentSlide);
 });
+
+
 
 // Contact form submission using EmailJS
 document.getElementById('contact-form').addEventListener('submit', function(e) {
