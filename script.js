@@ -1,5 +1,3 @@
-// script.js
-
 // Smooth scrolling for anchor links
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -48,23 +46,27 @@ next.addEventListener('click', () => {
     showSlide(currentSlide);
 });
 
-
+//Initiate EmailJS
+emailjs.init({
+    publicKey: "yr7wJ6hm-JtFhDcO_",
+});
 
 // Contact form submission using EmailJS
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+window.onload = function() {
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
 
-    // Generate a five-digit number for the contact_number variable
-    this.contact_number.value = Math.random() * 100000 | 0;
+        // Generate a five-digit number for the contact_number variable
+        this.contact_number.value = Math.random() * 100000 | 0;
 
-    // Send the form data using EmailJS
-    emailjs.sendForm('service_5mmr1dh', 'template_2f5k0hh', this)
-        .then(function() {
-            alert('Thank you for your message!');
-        }, function(error) {
-            alert('Oops! Something went wrong. Please try again.');
-            console.log('FAILED...', error);
+        // Send the form data using EmailJS
+        emailjs.sendForm('service_5mmr1dh', 'template_2f5k0hh', this)
+            .then(() => {
+                alert('Thank you for your message!');
+            }, (error) => {
+                alert('Oops! Something went wrong. Please try again.');
+                console.log('FAILED EMAIL...', error);
+            });
+        this.reset();
         });
-
-    this.reset();
-});
+}
