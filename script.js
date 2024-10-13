@@ -69,17 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
         autoScrollInterval = setInterval(nextSlide, 8000);
     }
 
-    // Pause auto-scroll on hover
-    const carouselContainer = document.querySelector('.carousel-container');
-
-    carouselContainer.addEventListener('mouseenter', () => {
-        clearInterval(autoScrollInterval);
-    });
-
-    carouselContainer.addEventListener('mouseleave', () => {
-        autoScrollInterval = setInterval(nextSlide, 8000);
-    });
-
     // Initialize EmailJS
     emailjs.init("yr7wJ6hm-JtFhDcO_"); // Replace with your actual Public Key
 
