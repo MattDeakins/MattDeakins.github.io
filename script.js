@@ -61,12 +61,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Auto-scroll functionality
-    let autoScrollInterval = setInterval(nextSlide, 10000); // Change 5000 to desired interval in milliseconds
+    let autoScrollInterval = setInterval(nextSlide, 8000); // Change 5000 to desired interval in milliseconds
 
     // Function to reset auto-scroll interval
     function resetAutoScroll() {
         clearInterval(autoScrollInterval);
-        autoScrollInterval = setInterval(nextSlide, 10000);
+        autoScrollInterval = setInterval(nextSlide, 8000);
     }
 
     // Pause auto-scroll on hover
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     carouselContainer.addEventListener('mouseleave', () => {
-        autoScrollInterval = setInterval(nextSlide, 10000);
+        autoScrollInterval = setInterval(nextSlide, 8000);
     });
 
     // Initialize EmailJS

@@ -257,14 +257,23 @@ nav {
 
 .carousel {
     flex: 1;
+    position: relative; /* Keep position relative if needed */
 }
 
 .carousel-item {
-    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    /* Optional: Add visibility and height for smoother transitions */
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s, height 1s;
 }
 
 .carousel-item.active {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    height: auto;
 }
 
 .carousel-item .quote {
@@ -285,6 +294,7 @@ nav {
     height: 24px;
     margin-left: 10px;
 }
+
 
 /* Contact Section */
 .contact-section {
@@ -456,7 +466,7 @@ footer {
     .carousel-item {
         padding: 10px;
     }
-    
+
     .carousel-container {
         flex-direction: column;
     }
