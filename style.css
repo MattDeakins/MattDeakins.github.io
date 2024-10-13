@@ -223,7 +223,7 @@ nav {
 }
 
 .about-text p {
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 /* Recommendations Section */
@@ -244,7 +244,7 @@ nav {
 .carousel-container .prev,
 .carousel-container .next {
     cursor: pointer;
-    font-size: 2em;
+    font-size: 3em;
     color: #007BFF;
     margin: 0 15px;
     user-select: none;
