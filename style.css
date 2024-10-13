@@ -233,58 +233,57 @@ nav {
     text-align: center;
 }
 
-.recommendations-section h2 {
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel-container .prev,
+.carousel-container .next {
+    cursor: pointer;
     font-size: 2em;
-    margin-bottom: 40px;
+    color: #007BFF;
+    margin: 0 15px;
+    user-select: none;
+}
+
+.carousel-container .prev:hover,
+.carousel-container .next:hover {
+    color: #0056b3;
 }
 
 .carousel {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
+    flex: 1;
 }
 
 .carousel-item {
     display: none;
-    padding: 20px;
 }
 
 .carousel-item.active {
     display: block;
 }
 
-.quote {
-    font-size: 1.5em;
+.carousel-item .quote {
+    font-size: 1.2em;
     font-style: italic;
     margin-bottom: 20px;
 }
 
-.name {
-    font-size: 1.2em;
+.carousel-item .name {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.name img {
-    width: 20px;
-    vertical-align: middle;
+.carousel-item .name img {
+    width: 24px;
+    height: 24px;
     margin-left: 10px;
-}
-
-.carousel-controls {
-    margin-top: 20px;
-}
-
-.carousel-controls .prev,
-.carousel-controls .next {
-    cursor: pointer;
-    font-size: 2em;
-    margin: 0 15px;
-    color: #007BFF;
-}
-
-.carousel-controls .prev:hover,
-.carousel-controls .next:hover {
-    color: #0056b3;
 }
 
 /* Contact Section */
@@ -456,6 +455,15 @@ footer {
 
     .carousel-item {
         padding: 10px;
+    }
+    
+    .carousel-container {
+        flex-direction: column;
+    }
+
+    .carousel-container .prev,
+    .carousel-container .next {
+        margin: 20px 0;
     }
 }
 
