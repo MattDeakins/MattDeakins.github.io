@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         this.contact_number.value = Math.random() * 100000 | 0;
 
         // Send the form data using EmailJS
-        emailjs.sendForm('service_5mmr1dh', 'template_2f5k0hh', this)
+        emailjs.sendForm('service_lmzpdec', 'template_2f5k0hh', this)
             .then(() => {
                 alert('Thank you for your message!');
                 this.reset();
