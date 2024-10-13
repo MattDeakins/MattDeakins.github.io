@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Sticky header on scroll
     window.addEventListener('scroll', function() {
         const header = document.querySelector('header');
-        if(window.scrollY > 50) {
+        if (window.scrollY > 50) {
             header.classList.add('header-scrolled');
         } else {
             header.classList.remove('header-scrolled');
@@ -31,22 +31,53 @@ document.addEventListener('DOMContentLoaded', function() {
     function showSlide(index) {
         slides.forEach((slide, i) => {
             slide.classList.remove('active');
-            if(i === index) {
+            if (i === index) {
                 slide.classList.add('active');
             }
         });
     }
 
+    // Add these functions
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide === 0) ? totalSlides - 1 : currentSlide - 1;
+        showSlide(currentSlide);
+    }
+
     showSlide(currentSlide);
 
     prev.addEventListener('click', () => {
-        currentSlide = (currentSlide === 0) ? totalSlides - 1 : currentSlide - 1;
-        showSlide(currentSlide);
+        prevSlide();
+        resetAutoScroll();
     });
 
     next.addEventListener('click', () => {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        showSlide(currentSlide);
+        nextSlide();
+        resetAutoScroll();
+    });
+
+    // Auto-scroll functionality
+    let autoScrollInterval = setInterval(nextSlide, 10000); // Change 5000 to desired interval in milliseconds
+
+    // Function to reset auto-scroll interval
+    function resetAutoScroll() {
+        clearInterval(autoScrollInterval);
+        autoScrollInterval = setInterval(nextSlide, 10000);
+    }
+
+    // Pause auto-scroll on hover
+    const carouselContainer = document.querySelector('.carousel-container');
+
+    carouselContainer.addEventListener('mouseenter', () => {
+        clearInterval(autoScrollInterval);
+    });
+
+    carouselContainer.addEventListener('mouseleave', () => {
+        autoScrollInterval = setInterval(nextSlide, 10000);
     });
 
     // Initialize EmailJS
