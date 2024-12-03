@@ -160,21 +160,38 @@
     <footer>
         <p>&copy; 2024 Firefly Labs Development Ltd</p>
     </footer>
-    <div id="cookie-banner">
+    <div id="cookie-banner" class="cookie-banner hidden">
         <p>This site uses cookies to improve your experience. By clicking “Accept,” you agree to the use of cookies for analytics.</p>
-        <button id="accept-cookies">Accept</button>
-        <button id="reject-cookies">Decline</button>
+        <div class="cookie-actions">
+            <button id="accept-cookies" class="cookie-btn accept">Accept</button>
+            <button id="reject-cookies" class="cookie-btn decline">Decline</button>
+        </div>
     </div>
     <script>
-        document.getElementById('accept-cookies').addEventListener('click', function() {
-            document.cookie = "cookies_accepted=true; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-            // Enable PostHog tracking
-            posthog.opt_in_capturing();
-        });
-        document.getElementById('reject-cookies').addEventListener('click', function() {
-            document.cookie = "cookies_accepted=false; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-            // Disable PostHog tracking
-            posthog.opt_out_capturing();
+        // Show the cookie banner only if no consent has been given
+        document.addEventListener('DOMContentLoaded', function () {
+            const cookieBanner = document.getElementById('cookie-banner');
+
+            const cookiesAccepted = document.cookie.split('; ').find(row => row.startsWith('cookies_accepted='));
+            if (!cookiesAccepted) {
+                cookieBanner.classList.remove('hidden');
+            }
+
+            // Accept cookies
+            document.getElementById('accept-cookies').addEventListener('click', function () {
+                document.cookie = "cookies_accepted=true; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+                // Enable PostHog tracking
+                posthog.opt_in_capturing();
+                cookieBanner.classList.add('hidden');
+            });
+
+            // Reject cookies
+            document.getElementById('reject-cookies').addEventListener('click', function () {
+                document.cookie = "cookies_accepted=false; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+                // Disable PostHog tracking
+                posthog.opt_out_capturing();
+                cookieBanner.classList.add('hidden');
+            });
         });
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
