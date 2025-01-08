@@ -485,6 +485,7 @@ footer {
     font-size: 1em;
     background: none;
     color: #333;
+    resize: none;
 }
 
 .form-group label {
