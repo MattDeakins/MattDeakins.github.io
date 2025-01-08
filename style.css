@@ -28,7 +28,7 @@ footer {
 @media (max-width: 600px) {
     .navbar {
         opacity: 0;
-        display: hidden;
+        display: none;
         pointer-events: none;
     }
 }
