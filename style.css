@@ -182,7 +182,7 @@ footer {
 }
 
 /* Extra space for large headlines or lists */
-.section h1, .section h2, .highlight-list {
+.section h1, .highlight-list {
     margin: 20px 0;
 }
 
@@ -237,7 +237,7 @@ footer {
     unicode-bidi: isolate;
     margin: 10px auto;
     max-width: 800px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .light-bg {
