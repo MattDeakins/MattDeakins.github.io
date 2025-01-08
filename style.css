@@ -471,7 +471,6 @@ footer {
         width: 80%;
     }
 }
-
 .form-group {
     position: relative;
     margin-bottom: 30px;
@@ -480,24 +479,22 @@ footer {
 .form-group input,
 .form-group textarea {
     width: 100%;
-    max-width: 100%; /* Prevents overflow */
-    padding: 15px;
+    padding: 10px;
     border: 1px solid #ccc;
-    margin-bottom: 15px;
     border-radius: 5px;
     font-size: 1em;
     background: none;
-    resize: none;
-    box-sizing: border-box; /* Ensures padding doesn't break the layout */
+    color: #333;
 }
 
 .form-group label {
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 10px;
+    left: 10px;
+    font-size: 1em;
     color: #aaa;
-    transition: all 0.3s;
     pointer-events: none;
+    transition: all 0.3s;
 }
 
 .form-group input:focus + label,
@@ -505,13 +502,12 @@ footer {
 .form-group textarea:focus + label,
 .form-group textarea:not(:placeholder-shown) + label {
     top: -10px;
-    left: 10px;
-    font-size: 0.8em;
-    color: #007BFF;
-    background-color: #f8f9fa;
+    left: 5px;
+    font-size: 0.85em;
+    color: #007BFF; /* Adjust to match your theme */
+    background-color: #fff; /* Ensure it matches your form's background */
     padding: 0 5px;
 }
-
 
 #contact-form button {
     background-color: #007BFF;
