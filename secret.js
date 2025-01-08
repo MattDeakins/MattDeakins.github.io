@@ -11,6 +11,54 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Carousel functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-item');
+    const totalSlides = slides.length;
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+            }
+        });
+    }
+
+    // Add these functions
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide === 0) ? totalSlides - 1 : currentSlide - 1;
+        showSlide(currentSlide);
+    }
+
+    showSlide(currentSlide);
+
+    prev.addEventListener('click', () => {
+        prevSlide();
+        resetAutoScroll();
+    });
+
+    next.addEventListener('click', () => {
+        nextSlide();
+        resetAutoScroll();
+    });
+
+    // Auto-scroll functionality
+    let autoScrollInterval = setInterval(nextSlide, 8000); // Change 5000 to desired interval in milliseconds
+
+    // Function to reset auto-scroll interval
+    function resetAutoScroll() {
+        clearInterval(autoScrollInterval);
+        autoScrollInterval = setInterval(nextSlide, 8000);
+    }
+
     // Initialize EmailJS
     emailjs.init("yr7wJ6hm-JtFhDcO_"); // Replace with your actual Public Key
 
