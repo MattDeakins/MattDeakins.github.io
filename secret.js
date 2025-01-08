@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Navbar functionality
     const navbar = document.getElementById('navbar');
     const approachSection = document.getElementById('approach');
 
@@ -9,6 +10,30 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             navbar.classList.add('hidden');
         }
+    });
+
+    // Cookie banner functionality
+    const cookieBanner = document.getElementById('cookie-banner');
+
+    const cookiesAccepted = document.cookie.split('; ').find(row => row.startsWith('cookies_accepted='));
+    if (!cookiesAccepted) {
+        cookieBanner.classList.remove('hidden');
+    }
+
+    // Accept cookies
+    document.getElementById('accept-cookies').addEventListener('click', function () {
+        document.cookie = "cookies_accepted=true; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+        // Enable PostHog tracking
+        posthog.opt_in_capturing();
+        cookieBanner.classList.add('hidden');
+    });
+
+    // Reject cookies
+    document.getElementById('reject-cookies').addEventListener('click', function () {
+        document.cookie = "cookies_accepted=false; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+        // Disable PostHog tracking
+        posthog.opt_out_capturing();
+        cookieBanner.classList.add('hidden');
     });
 
     // Carousel functionality
@@ -27,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Add these functions
     function nextSlide() {
         currentSlide = (currentSlide + 1) % totalSlides;
         showSlide(currentSlide);
