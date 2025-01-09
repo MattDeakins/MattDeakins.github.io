@@ -12,30 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Cookie banner functionality
-    const cookieBanner = document.getElementById('cookie-banner');
-
-    const cookiesAccepted = document.cookie.split('; ').find(row => row.startsWith('cookies_accepted='));
-    if (!cookiesAccepted) {
-        cookieBanner.classList.remove('hidden');
-    }
-
-    // Accept cookies
-    document.getElementById('accept-cookies').addEventListener('click', function () {
-        document.cookie = "cookies_accepted=true; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-        // Enable PostHog tracking
-        posthog.opt_in_capturing();
-        cookieBanner.classList.add('hidden');
-    });
-
-    // Reject cookies
-    document.getElementById('reject-cookies').addEventListener('click', function () {
-        document.cookie = "cookies_accepted=false; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-        // Disable PostHog tracking
-        posthog.opt_out_capturing();
-        cookieBanner.classList.add('hidden');
-    });
-
     // Carousel functionality
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel-item');
@@ -75,12 +51,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Auto-scroll functionality
-    let autoScrollInterval = setInterval(nextSlide, 8000); // Change 5000 to desired interval in milliseconds
+    let autoScrollInterval = setInterval(nextSlide, 10000); // Change desired interval in milliseconds
 
     // Function to reset auto-scroll interval
     function resetAutoScroll() {
         clearInterval(autoScrollInterval);
-        autoScrollInterval = setInterval(nextSlide, 8000);
+        autoScrollInterval = setInterval(nextSlide, 10000);
     }
 
     // Initialize EmailJS
