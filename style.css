@@ -413,8 +413,8 @@ footer {
 }
 
 .about-image img {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid #fff;
@@ -556,8 +556,8 @@ textarea::placeholder {
 }
 
 #contact-form button {
-    background-color: #fcdc4d;
-    color: #1e293b;
+    background-color: #1e293b;
+    color: #fff;
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
@@ -567,7 +567,8 @@ textarea::placeholder {
 }
 
 #contact-form button:hover {
-    background-color: #e9d062;
+    background-color: #fcdc4d;
+    color: #1e293b;
 }
 
 /* Recommendations Section */
