@@ -393,7 +393,7 @@ footer {
 
 /* About Image */
 .about-section {
-    padding: 80px 20px;
+    padding: 80px;
     background-color: #f8f9fa;
 }
 
@@ -403,7 +403,6 @@ footer {
     align-items: center;
     justify-items: center;
     max-width: 1000px;
-    margin: 0 auto;
 }
 
 .about-image {
