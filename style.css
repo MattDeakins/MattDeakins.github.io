@@ -498,6 +498,14 @@ footer {
     transition: all 0.3s;
 }
 
+input::placeholder,
+textarea::placeholder {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Use your desired font */
+    font-size: 1em; /* Ensure consistent font size */
+    color: #aaa; /* Placeholder text color */
+    font-style: italic; /* Optional: Italicized placeholder text for emphasis */
+}
+
 .form-group input:focus + label,
 .form-group input:not(:placeholder-shown) + label,
 .form-group textarea:focus + label,
@@ -505,14 +513,13 @@ footer {
     top: -10px;
     left: 5px;
     font-size: 0.85em;
-    color: #007BFF; /* Adjust to match your theme */
     background-color: #fff; /* Ensure it matches your form's background */
     padding: 0 5px;
 }
 
 #contact-form button {
-    background-color: #007BFF;
-    color: #fff;
+    background-color: #fcdc4d;
+    color: #1e293b;
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
@@ -522,7 +529,7 @@ footer {
 }
 
 #contact-form button:hover {
-    background-color: #0056b3;
+    background-color: #e9d062;
 }
 
 /* Recommendations Section */
