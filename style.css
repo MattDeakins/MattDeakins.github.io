@@ -523,6 +523,8 @@ footer {
     background: none;
     color: #333;
     resize: none;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1em; 
 }
 
 .form-group label {
@@ -537,10 +539,10 @@ footer {
 
 input::placeholder,
 textarea::placeholder {
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Use your desired font */
-    font-size: 1em; /* Ensure consistent font size */
-    color: #aaa; /* Placeholder text color */
-    font-style: italic; /* Optional: Italicized placeholder text for emphasis */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1em; 
+    color: #aaa; 
+    font-style: italic;
 }
 
 .form-group input:focus + label,
@@ -552,6 +554,30 @@ textarea::placeholder {
     font-size: 0.85em;
     background-color: #fff; /* Ensure it matches your form's background */
     padding: 0 5px;
+}
+
+.coffee-chat {
+    margin: 10px;
+}
+
+.coffee-chat-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fcdc4d; /* Yellow background matching your site */
+    color: #1e293b; /* Dark text color for contrast */
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.coffee-chat-btn:hover {
+    background-color: #1e293b; /* Swap background and text colors on hover */
+    color: #fcdc4d;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
 }
 
 #contact-form button {
@@ -568,6 +594,9 @@ textarea::placeholder {
 #contact-form button:hover {
     background-color: #fcdc4d;
     color: #1e293b;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
 }
 
 /* Recommendations Section */
