@@ -205,14 +205,12 @@ footer {
 
 .fact {
     font-size: 1.5em;
-    color: #ffffff;
     margin-top: 5vh;
     margin-bottom: 5vh;
 }
 
 .fact-title {
     font-size: 1.5em;
-    color: #ffffff;
     margin-bottom: 8vh;
 }
 
@@ -255,6 +253,25 @@ footer {
     word-wrap: break-word; /* Ensures no overflow */
     margin-bottom: 30px;
     padding-right: 30%;
+}
+@media (max-width: 768px) {
+    .section-headline-dark {
+        padding-right: 10%; /* Smaller padding for mobile */
+    }
+}
+
+.section-headline-dark-facts {
+    text-align: center; /* Right-aligns the text */
+    font-family: 'Impact', 'Arial Black', sans-serif; /* Attention-grabbing font */
+    font-weight: bold; /* Ensures bold text */
+    font-size: 2.5em; /* Adjust size for impact */
+    color: #1e293b; /* Matches the yellow in your branding */
+    margin: 0; /* Removes unnecessary spacing */
+    line-height: 1.2; /* Keeps the text compact */
+    text-transform: uppercase; /* Makes the text all caps */
+    letter-spacing: 2px; /* Adds some spacing between letters */
+    word-wrap: break-word; /* Ensures no overflow */
+    margin-bottom: 30px;
 }
 @media (max-width: 768px) {
     .section-headline-dark {
@@ -666,5 +683,34 @@ textarea::placeholder {
     width: 24px;
     height: auto;
     margin-left: 10px;
+}
+
+/* Landing Page Buttons */
+.button-group {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Space between buttons */
+}
+
+.landing-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #fcdc4d; /* Yellow matching your site theme */
+    color: #1e293b; /* Dark text color for contrast */
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-align: center;
+    width: 80%; /* Adjust the width of the buttons */
+    max-width: 400px; /* Limit the maximum width for larger screens */
+}
+
+.landing-btn:hover {
+    background-color: #ffffff; /* White background on hover */
+    color: #1e293b; /* Dark text on hover */
 }
 
